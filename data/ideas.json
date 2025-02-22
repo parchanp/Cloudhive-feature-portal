@@ -1,0 +1,542 @@
+[
+  {
+    "id": 1,
+    "summary": "Idea 1",
+    "description": "Description for Idea 1.",
+    "employeeId": 2,
+    "priority": "Medium",
+    "upVotes": 3,
+    "downVotes": 0
+  },
+  {
+    "id": 2,
+    "summary": "Idea 2",
+    "description": "Description for Idea 2.",
+    "employeeId": 3,
+    "priority": "High",
+    "upVotes": 6,
+    "downVotes": 0
+  },
+  {
+    "id": 3,
+    "summary": "Idea 3",
+    "description": "Description for Idea 3.",
+    "employeeId": 4,
+    "priority": "Low",
+    "upVotes": 9,
+    "downVotes": 0
+  },
+  {
+    "id": 4,
+    "summary": "Idea 4",
+    "description": "Description for Idea 4.",
+    "employeeId": 5,
+    "priority": "Medium",
+    "upVotes": 12,
+    "downVotes": 0
+  },
+  {
+    "id": 5,
+    "summary": "Idea 5",
+    "description": "Description for Idea 5.",
+    "employeeId": 6,
+    "priority": "High",
+    "upVotes": 15,
+    "downVotes": 0
+  },
+  {
+    "id": 6,
+    "summary": "Idea 6",
+    "description": "Description for Idea 6.",
+    "employeeId": 7,
+    "priority": "Low",
+    "upVotes": 18,
+    "downVotes": 0
+  },
+  {
+    "id": 7,
+    "summary": "Idea 7",
+    "description": "Description for Idea 7.",
+    "employeeId": 8,
+    "priority": "Medium",
+    "upVotes": 21,
+    "downVotes": 0
+  },
+  {
+    "id": 8,
+    "summary": "Idea 8",
+    "description": "Description for Idea 8.",
+    "employeeId": 9,
+    "priority": "High",
+    "upVotes": 24,
+    "downVotes": 0
+  },
+  {
+    "id": 9,
+    "summary": "Idea 9",
+    "description": "Description for Idea 9.",
+    "employeeId": 10,
+    "priority": "Low",
+    "upVotes": 27,
+    "downVotes": 0
+  },
+  {
+    "id": 10,
+    "summary": "Idea 10",
+    "description": "Description for Idea 10.",
+    "employeeId": 1,
+    "priority": "Medium",
+    "upVotes": 30,
+    "downVotes": 0
+  },
+  {
+    "id": 11,
+    "summary": "Idea 11",
+    "description": "Description for Idea 11.",
+    "employeeId": 2,
+    "priority": "High",
+    "upVotes": 33,
+    "downVotes": 0
+  },
+  {
+    "id": 12,
+    "summary": "Idea 12",
+    "description": "Description for Idea 12.",
+    "employeeId": 3,
+    "priority": "Low",
+    "upVotes": 36,
+    "downVotes": 0
+  },
+  {
+    "id": 13,
+    "summary": "Idea 13",
+    "description": "Description for Idea 13.",
+    "employeeId": 4,
+    "priority": "Medium",
+    "upVotes": 39,
+    "downVotes": 0
+  },
+  {
+    "id": 14,
+    "summary": "Idea 14",
+    "description": "Description for Idea 14.",
+    "employeeId": 5,
+    "priority": "High",
+    "upVotes": 42,
+    "downVotes": 1
+  },
+  {
+    "id": 15,
+    "summary": "Idea 15",
+    "description": "Description for Idea 15.",
+    "employeeId": 6,
+    "priority": "Low",
+    "upVotes": 45,
+    "downVotes": 1
+  },
+  {
+    "id": 16,
+    "summary": "Idea 16",
+    "description": "Description for Idea 16.",
+    "employeeId": 7,
+    "priority": "Medium",
+    "upVotes": 52,
+    "downVotes": 9
+  },
+  {
+    "id": 17,
+    "summary": "Idea 17",
+    "description": "Description for Idea 17.",
+    "employeeId": 8,
+    "priority": "High",
+    "upVotes": 1,
+    "downVotes": 0
+  },
+  {
+    "id": 18,
+    "summary": "Idea 18",
+    "description": "Description for Idea 18.",
+    "employeeId": 9,
+    "priority": "Low",
+    "upVotes": 4,
+    "downVotes": 0
+  },
+  {
+    "id": 19,
+    "summary": "Idea 19",
+    "description": "Description for Idea 19.",
+    "employeeId": 10,
+    "priority": "Medium",
+    "upVotes": 7,
+    "downVotes": 0
+  },
+  {
+    "id": 20,
+    "summary": "Idea 20",
+    "description": "Description for Idea 20.",
+    "employeeId": 1,
+    "priority": "High",
+    "upVotes": 10,
+    "downVotes": 0
+  },
+  {
+    "id": 21,
+    "summary": "Idea 21",
+    "description": "Description for Idea 21.",
+    "employeeId": 2,
+    "priority": "Low",
+    "upVotes": 13,
+    "downVotes": 0
+  },
+  {
+    "id": 22,
+    "summary": "Idea 22",
+    "description": "Description for Idea 22.",
+    "employeeId": 3,
+    "priority": "Medium",
+    "upVotes": 16,
+    "downVotes": 0
+  },
+  {
+    "id": 23,
+    "summary": "Idea 23",
+    "description": "Description for Idea 23.",
+    "employeeId": 4,
+    "priority": "High",
+    "upVotes": 19,
+    "downVotes": 0
+  },
+  {
+    "id": 24,
+    "summary": "Idea 24",
+    "description": "Description for Idea 24.",
+    "employeeId": 5,
+    "priority": "Low",
+    "upVotes": 22,
+    "downVotes": 0
+  },
+  {
+    "id": 25,
+    "summary": "Idea 25",
+    "description": "Description for Idea 25.",
+    "employeeId": 6,
+    "priority": "Medium",
+    "upVotes": 25,
+    "downVotes": 0
+  },
+  {
+    "id": 26,
+    "summary": "Idea 26",
+    "description": "Description for Idea 26.",
+    "employeeId": 7,
+    "priority": "High",
+    "upVotes": 28,
+    "downVotes": 0
+  },
+  {
+    "id": 27,
+    "summary": "Idea 27",
+    "description": "Description for Idea 27.",
+    "employeeId": 8,
+    "priority": "Low",
+    "upVotes": 31,
+    "downVotes": 0
+  },
+  {
+    "id": 28,
+    "summary": "Idea 28",
+    "description": "Description for Idea 28.",
+    "employeeId": 9,
+    "priority": "Medium",
+    "upVotes": 34,
+    "downVotes": 0
+  },
+  {
+    "id": 29,
+    "summary": "Idea 29",
+    "description": "Description for Idea 29.",
+    "employeeId": 10,
+    "priority": "High",
+    "upVotes": 37,
+    "downVotes": 0
+  },
+  {
+    "id": 30,
+    "summary": "Idea 30",
+    "description": "Description for Idea 30.",
+    "employeeId": 1,
+    "priority": "Low",
+    "upVotes": 40,
+    "downVotes": 1
+  },
+  {
+    "id": 31,
+    "summary": "Idea 31",
+    "description": "Description for Idea 31.",
+    "employeeId": 2,
+    "priority": "Medium",
+    "upVotes": 43,
+    "downVotes": 0
+  },
+  {
+    "id": 32,
+    "summary": "Idea 32",
+    "description": "Description for Idea 32.",
+    "employeeId": 3,
+    "priority": "High",
+    "upVotes": 47,
+    "downVotes": 1
+  },
+  {
+    "id": 33,
+    "summary": "Idea 33",
+    "description": "Description for Idea 33.",
+    "employeeId": 4,
+    "priority": "Low",
+    "upVotes": 62,
+    "downVotes": 16
+  },
+  {
+    "id": 34,
+    "summary": "Idea 34",
+    "description": "Description for Idea 34.",
+    "employeeId": 5,
+    "priority": "Medium",
+    "upVotes": 2,
+    "downVotes": 0
+  },
+  {
+    "id": 35,
+    "summary": "Idea 35",
+    "description": "Description for Idea 35.",
+    "employeeId": 6,
+    "priority": "High",
+    "upVotes": 5,
+    "downVotes": 0
+  },
+  {
+    "id": 36,
+    "summary": "Idea 36",
+    "description": "Description for Idea 36.",
+    "employeeId": 7,
+    "priority": "Low",
+    "upVotes": 8,
+    "downVotes": 0
+  },
+  {
+    "id": 37,
+    "summary": "Idea 37",
+    "description": "Description for Idea 37.",
+    "employeeId": 8,
+    "priority": "Medium",
+    "upVotes": 11,
+    "downVotes": 0
+  },
+  {
+    "id": 38,
+    "summary": "Idea 38",
+    "description": "Description for Idea 38.",
+    "employeeId": 9,
+    "priority": "High",
+    "upVotes": 14,
+    "downVotes": 0
+  },
+  {
+    "id": 39,
+    "summary": "Idea 39",
+    "description": "Description for Idea 39.",
+    "employeeId": 10,
+    "priority": "Low",
+    "upVotes": 17,
+    "downVotes": 0
+  },
+  {
+    "id": 40,
+    "summary": "Idea 40",
+    "description": "Description for Idea 40.",
+    "employeeId": 1,
+    "priority": "Medium",
+    "upVotes": 20,
+    "downVotes": 0
+  },
+  {
+    "id": 41,
+    "summary": "Idea 41",
+    "description": "Description for Idea 41.",
+    "employeeId": 2,
+    "priority": "High",
+    "upVotes": 23,
+    "downVotes": 0
+  },
+  {
+    "id": 42,
+    "summary": "Idea 42",
+    "description": "Description for Idea 42.",
+    "employeeId": 3,
+    "priority": "Low",
+    "upVotes": 26,
+    "downVotes": 0
+  },
+  {
+    "id": 43,
+    "summary": "Idea 43",
+    "description": "Description for Idea 43.",
+    "employeeId": 4,
+    "priority": "Medium",
+    "upVotes": 29,
+    "downVotes": 0
+  },
+  {
+    "id": 44,
+    "summary": "Idea 44",
+    "description": "Description for Idea 44.",
+    "employeeId": 5,
+    "priority": "High",
+    "upVotes": 32,
+    "downVotes": 0
+  },
+  {
+    "id": 45,
+    "summary": "Idea 45",
+    "description": "Description for Idea 45.",
+    "employeeId": 6,
+    "priority": "Low",
+    "upVotes": 35,
+    "downVotes": 0
+  },
+  {
+    "id": 46,
+    "summary": "Idea 46",
+    "description": "Description for Idea 46.",
+    "employeeId": 7,
+    "priority": "Medium",
+    "upVotes": 38,
+    "downVotes": 0
+  },
+  {
+    "id": 47,
+    "summary": "Idea 47",
+    "description": "Description for Idea 47.",
+    "employeeId": 8,
+    "priority": "High",
+    "upVotes": 41,
+    "downVotes": 1
+  },
+  {
+    "id": 48,
+    "summary": "Idea 48",
+    "description": "Description for Idea 48.",
+    "employeeId": 9,
+    "priority": "Low",
+    "upVotes": 44,
+    "downVotes": 4
+  },
+  {
+    "id": 49,
+    "summary": "Idea 49",
+    "description": "Description for Idea 49.",
+    "employeeId": 10,
+    "priority": "Medium",
+    "upVotes": 54,
+    "downVotes": 7
+  },
+  {
+    "id": 50,
+    "summary": "Idea 50",
+    "description": "Description for Idea 50.",
+    "employeeId": 1,
+    "priority": "High",
+    "upVotes": 0,
+    "downVotes": 0
+  },
+  {
+    "id": 51,
+    "summary": "Idea 51",
+    "description": "Description for Idea 51.",
+    "employeeId": 2,
+    "priority": "Low",
+    "upVotes": 3,
+    "downVotes": 0
+  },
+  {
+    "id": 52,
+    "summary": "Idea 52",
+    "description": "Description for Idea 52.",
+    "employeeId": 3,
+    "priority": "Medium",
+    "upVotes": 6,
+    "downVotes": 0
+  },
+  {
+    "id": 53,
+    "summary": "Idea 53",
+    "description": "Description for Idea 53.",
+    "employeeId": 4,
+    "priority": "High",
+    "upVotes": 9,
+    "downVotes": 0
+  },
+  {
+    "id": 54,
+    "summary": "Idea 54",
+    "description": "Description for Idea 54.",
+    "employeeId": 5,
+    "priority": "Low",
+    "upVotes": 12,
+    "downVotes": 0
+  },
+  {
+    "id": 55,
+    "summary": "Idea 55",
+    "description": "Description for Idea 55.",
+    "employeeId": 6,
+    "priority": "Medium",
+    "upVotes": 15,
+    "downVotes": 0
+  },
+  {
+    "id": 56,
+    "summary": "Idea 56",
+    "description": "Description for Idea 56.",
+    "employeeId": 7,
+    "priority": "High",
+    "upVotes": 18,
+    "downVotes": 0
+  },
+  {
+    "id": 57,
+    "summary": "Idea 57",
+    "description": "Description for Idea 57.",
+    "employeeId": 8,
+    "priority": "Low",
+    "upVotes": 21,
+    "downVotes": 0
+  },
+  {
+    "id": 58,
+    "summary": "Idea 58",
+    "description": "Description for Idea 58.",
+    "employeeId": 9,
+    "priority": "Medium",
+    "upVotes": 24,
+    "downVotes": 0
+  },
+  {
+    "id": 59,
+    "summary": "Idea 59",
+    "description": "Description for Idea 59.",
+    "employeeId": 10,
+    "priority": "High",
+    "upVotes": 27,
+    "downVotes": 0
+  },
+  {
+    "id": 60,
+    "summary": "Idea 60",
+    "description": "Description for Idea 60.",
+    "employeeId": 1,
+    "priority": "Low",
+    "upVotes": 30,
+    "downVotes": 0
+  }
+]
