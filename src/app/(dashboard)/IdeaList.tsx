@@ -19,7 +19,7 @@ export default function IdeaList() {
   });
 
   const upvoteMutation = useMutation({
-    onMutate: async (id) => {
+    onMutate: async (id: string) => {
       await queryClient.cancelQueries({
         queryKey: ["ideas", currentPage, searchQuery],
       });
@@ -37,7 +37,7 @@ export default function IdeaList() {
       );
       return { previousIdeas };
     },
-    mutationFn: (id: number) => upvoteIdea(id),
+    mutationFn: (id: string) => upvoteIdea(id),
 
     onError: (_error, _id, context) => {
       if (context?.previousIdeas) {
@@ -55,7 +55,7 @@ export default function IdeaList() {
   });
 
   const downvoteMutation = useMutation({
-    onMutate: async (id) => {
+    onMutate: async (id: string) => {
       await queryClient.cancelQueries({
         queryKey: ["ideas", currentPage, searchQuery],
       });
@@ -73,7 +73,7 @@ export default function IdeaList() {
       );
       return { previousIdeas };
     },
-    mutationFn: (id: number) => downvoteIdea(id),
+    mutationFn: (id: string) => downvoteIdea(id),
 
     onError: (_error, _id, context) => {
       if (context?.previousIdeas) {
@@ -96,7 +96,7 @@ export default function IdeaList() {
   };
   const handleUpvote = (
     event: React.MouseEvent<HTMLButtonElement>,
-    id: number
+    id: string
   ) => {
     event.preventDefault();
     event.stopPropagation();
@@ -105,7 +105,7 @@ export default function IdeaList() {
 
   const handleDownvote = (
     event: React.MouseEvent<HTMLButtonElement>,
-    id: number
+    id: string
   ) => {
     event.preventDefault();
     event.stopPropagation();
@@ -113,11 +113,23 @@ export default function IdeaList() {
   };
 
   return (
-    <main className="p-6 max-w-4xl mx-auto">
+    <main className="p-6 max-w-4xl mx-auto relative flex flex-col min-h-screen">
+      {/* Page Title */}
       <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">
         Feature Ideas
       </h1>
 
+      {/* Create Idea Button */}
+      <div className="flex justify-end mb-4">
+        <Link
+          href="/create-idea"
+          className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+        >
+          ➕ Create Idea
+        </Link>
+      </div>
+
+      {/* Search Bar */}
       <div className="relative mb-6">
         <input
           type="text"
@@ -142,12 +154,13 @@ export default function IdeaList() {
         </svg>
       </div>
 
+      {/* Ideas List */}
       {isPending ? (
         <p className="text-center text-gray-500 dark:text-gray-300">
           Loading...
         </p>
       ) : (
-        <ul className="space-y-4">
+        <ul className="space-y-4 flex-grow">
           {ideas.map((idea) => (
             <li
               key={idea.id}
@@ -159,7 +172,7 @@ export default function IdeaList() {
                     {idea.summary}
                   </h2>
                   <h3 className="text-sm text-gray-500 dark:text-gray-400">
-                    Added By - Employee ID: {idea.employeeId}
+                    Added By - {idea.employeeName}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
                     {idea.description}
@@ -199,14 +212,9 @@ export default function IdeaList() {
         </ul>
       )}
 
-      {ideas.length > 0 && (
-        <div className="mt-6 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-          />
-        </div>
-      )}
+      <div className="mt-auto pt-6 flex justify-center">
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      </div>
     </main>
   );
 }

@@ -2,6 +2,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { Idea } from "../utils/types";
+import { v4 as uuidv4 } from "uuid";
 
 const FILE_PATH = path.join(process.cwd(), "data", "ideas.json");
 
@@ -19,13 +20,43 @@ export async function fetchIdeas(page: number = 1, limit: number = 20, searchQue
   return paginatedIdeas;
 }
 
-export async function fetchIdeaById(id: number){
+export async function fetchIdeaById(id: string){
   const ideas: Idea[] = await fetchIdeas();
   const pp = ideas.find((idea) => idea.id === id);
   return pp
 }
 
-export async function upvoteIdea(id: number) {
+export async function createIdea(formData: FormData) {
+  try {
+    const summary = formData.get("summary") as string;
+    const description = formData.get("description") as string;
+    const employee = formData.get("employee") as string;
+    const priority = formData.get("priority") as string;
+
+    if (!summary || !description || !employee) {
+      throw new Error("Missing required fields");
+    }
+
+    let ideas = [];
+    try {
+      const fileData = await fs.readFile(FILE_PATH, "utf-8");
+      ideas = JSON.parse(fileData);
+    } catch (error) {
+      console.warn("No existing data, creating a new file.");
+    }
+
+    const newIdea = { id:uuidv4() , summary, description, employee , priority , upVotes : 0 , downVotes: 0 };
+
+    ideas.push(newIdea);
+    await fs.writeFile(FILE_PATH, JSON.stringify(ideas, null, 2));
+
+    return { success: true, message: "Idea created successfully", idea: newIdea };
+  } catch (error: any) {
+    return { success: false, message: error.message };
+  }
+}
+
+export async function upvoteIdea(id: string) {
   try {
     const data = await fs.readFile(FILE_PATH, "utf-8");
     let ideas: Idea[] = JSON.parse(data);
@@ -46,7 +77,7 @@ export async function upvoteIdea(id: number) {
   }
 }
 
-export async function downvoteIdea(id: number) {
+export async function downvoteIdea(id: string) {
   try {
     const data = await fs.readFile(FILE_PATH, "utf-8");
     let ideas: Idea[] = JSON.parse(data);
@@ -60,9 +91,11 @@ export async function downvoteIdea(id: number) {
 
     await fs.writeFile(FILE_PATH, JSON.stringify(ideas, null, 2), "utf-8");
 
-    return ideas[ideaIndex]; // Return the updated idea
+    return ideas[ideaIndex];
   } catch (error) {
     console.error("Error upvoting idea:", error);
     throw new Error("Failed to upvote idea");
   }
 }
+
+

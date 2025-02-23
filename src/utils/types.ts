@@ -1,15 +1,20 @@
 import { Dispatch, SetStateAction } from "react";
 
 export type Idea = {
-    id: number;
+    id: string;
     summary: string;
     description: string;
-    employeeId: number;
-    employeeName?: string;
+    employeeName: string;
     upVotes: number;
     downVotes: number;
     priority: string;
   };
+
+  export type Employee ={
+    id: string;
+    name: string;
+    profileImage: string;
+  }
   
   export type IdeaListProps = {
     ideas: Idea[];
@@ -19,3 +24,10 @@ export type Idea = {
     currentPage: number;
     setCurrentPage: Dispatch<SetStateAction<number>>
   }
+
+  export type IdeaFormValues = {
+    summary: string;
+    description: string;
+    employee: string;
+    priority: string;
+  };
