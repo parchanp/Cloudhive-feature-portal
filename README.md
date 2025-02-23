@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📌 CloudHive Feature Idea Portal
 
-## Getting Started
+A proof-of-concept (PoC) **Next.js 15** web application for submitting, voting, and exploring feature ideas.
 
-First, run the development server:
+---
 
+## 🚀 Getting Started
+
+### **Prerequisites**  
+Ensure you have the following installed:  
+- **Node.js 18+**  
+- **pnpm** (package manager)  
+
+### **Installation & Running Locally**  
+Clone the repository and install dependencies:  
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/parchanp/Cloudhive-feature-portal.git
+cd Cloudhive-feature-portal
+pnpm install
+pnpm run dev
 ```
+The application will be available at **[http://localhost:3000](http://localhost:3000)**.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Design Constraints
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Frontend-Only Architecture**  
+- The app does not use a traditional database.  
+- Data is stored in **JSON files** instead of a database.  
+- **Server Actions** are used for handling data.  
 
-## Learn More
+### **Tech Stack**  
+- **Next.js 15 (App Router)**  
+- **React 19 + TypeScript**  
+- **TailwindCSS** for styling  
+- **pnpm** for package management  
+- **react-hook-form** for form management  
+- **TanStack Query** for client-side state management  
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Scalability Constraints**  
+- JSON file storage is **not suitable for large-scale applications**.  
+- There is **no authentication** (assumed for internal use).  
+- Server Actions should be **efficiently managed** for read/write operations.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **UI/UX Constraints**  
+- **Pagination & Search** are required for idea exploration.  
+- **Voting system** for ranking feature ideas.  
+- The UI should be **minimal, fast, and user-friendly**.  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 Assumptions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- This project is an **internal tool** and does **not** require authentication.  
+- Ideas are stored as **JSON objects**, which means data does **not persist** after server redeployments.  
+- The UI follows a **simple and intuitive design** for ease of use.
+- Any user can delete the idea from the list.
+
+---
+
+## 🚀 Future Enhancements
+
+✅ **Database Integration** – Replace JSON storage with a database (e.g., PostgreSQL, MongoDB).  
+✅ **Authentication & Authorization** – Implement user authentication and role-based access.  
+✅ **Sorting & Filtering** – Improve idea exploration with better search and filter options.  
+✅ **Improved UI/UX** – Add animations, themes, and mobile responsiveness enhancements.  
+
+---
+
+
