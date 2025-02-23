@@ -1,11 +1,227 @@
 [
   {
-    "id": "56904fac-6115-49fa-aebb-71cc4a290b26",
-    "summary": "Smart Meeting Scheduler",
-    "description": "Managing meeting schedules across multiple teams and time zones is a challenge. The Smart Meeting Scheduler would integrate with employees' calendars (Google Calendar, Outlook, etc.), suggest optimal meeting times based on availability, and use AI to recommend slots with the least conflicts.\r\n\r\nKey Features:\r\n✅ AI-powered suggestions to pick the best time for all attendees\r\n✅ Automatic time zone adjustments for remote teams\r\n✅ Smart reminders & rescheduling to avoid last-minute conflicts\r\n✅ Integration with Slack, Teams, and email for seamless notifications\r\n\r\nThis feature would help reduce meeting overlaps, improve productivity, and eliminate back-and-forth scheduling emails. ",
-    "employeeName": "Alice Johnson",
+    "id": "feb0a0b1-b55c-4f0c-9107-1b84fc9ca8bb",
+    "summary": "AI-Powered Resume Screener",
+    "description": "An AI-based system that scans resumes, matches them to job descriptions, and ranks candidates based on relevance.",
+    "employeeName": "Jasmine Patel",
+    "priority": "High",
+    "upVotes": 25,
+    "downVotes": 3
+  },
+  {
+    "id": "267fe48e-f8a6-4da9-be3c-b9d84b7e1aaf",
+    "summary": "Automated Expense Management System",
+    "description": "A system that allows employees to scan receipts, auto-categorizes expenses, and submits reimbursements automatically.",
+    "employeeName": "Ethan Parker",
     "priority": "Medium",
-    "upVotes": 4,
+    "upVotes": 23,
     "downVotes": 1
+  },
+  {
+    "id": "687ea709-98da-45b2-af0e-f5cd6a093564",
+    "summary": "Smart Email Sorting & Prioritization",
+    "description": "An AI-powered tool that categorizes and prioritizes emails based on urgency and sender importance.",
+    "employeeName": "Fiona Mitchell",
+    "priority": "High",
+    "upVotes": 15,
+    "downVotes": 6
+  },
+  {
+    "id": "a4149b06-e3dd-4a7d-b50c-12f3c34e8595",
+    "summary": "Virtual Office Tour for Remote Hires",
+    "description": "A 3D virtual office experience that helps remote employees explore the workplace and meet their team.",
+    "employeeName": "George Hamilton",
+    "priority": "Low",
+    "upVotes": 18,
+    "downVotes": 3
+  },
+  {
+    "id": "50f5899f-0ec7-479b-a388-c922aa0b6338",
+    "summary": "AI Chatbot for Customer Support",
+    "description": "A chatbot that provides instant responses to customer queries and escalates complex issues to human agents.",
+    "employeeName": "Fiona Mitchell",
+    "priority": "Medium",
+    "upVotes": 28,
+    "downVotes": 1
+  },
+  {
+    "id": "171ff4d4-d03c-4618-9a65-4f466e2eccae",
+    "summary": "Automated Code Review Tool",
+    "description": "An AI-driven tool that reviews code for best practices, security vulnerabilities, and performance optimizations.",
+    "employeeName": "Charlie Davis",
+    "priority": "Low",
+    "upVotes": 9,
+    "downVotes": 7
+  },
+  {
+    "id": "cedd4134-2811-41ea-a1af-731050bdd811",
+    "summary": "Smart Inventory Management System",
+    "description": "A system that tracks inventory in real-time, predicts restocking needs, and reduces waste.",
+    "employeeName": "Jasmine Patel",
+    "priority": "High",
+    "upVotes": 23,
+    "downVotes": 6
+  },
+  {
+    "id": "6e4d0f05-2426-4be0-91b7-2759fe7f4da5",
+    "summary": "AI-Based Health Monitoring App",
+    "description": "An app that tracks health metrics, analyzes trends, and provides personalized wellness recommendations.",
+    "employeeName": "Ethan Parker",
+    "priority": "High",
+    "upVotes": 22,
+    "downVotes": 1
+  },
+  {
+    "id": "5fcdceb7-b3bf-4585-b379-d9b1f5fccf1c",
+    "summary": "Remote Collaboration VR Platform",
+    "description": "A VR-based tool that allows remote teams to work together in a shared virtual workspace.",
+    "employeeName": "Charlie Davis",
+    "priority": "Low",
+    "upVotes": 12,
+    "downVotes": 0
+  },
+  {
+    "id": "abd9ecb1-4a3e-450d-b15f-cd40b47a7b69",
+    "summary": "Personalized Learning Platform",
+    "description": "An adaptive learning platform that tailors educational content based on student progress and learning style.",
+    "employeeName": "Alice Johnson",
+    "priority": "Low",
+    "upVotes": 19,
+    "downVotes": 0
+  },
+  {
+    "id": "a5723541-faaa-4421-9b28-a2bb63dbab86",
+    "summary": "AI-Powered Personal Finance Manager",
+    "description": "A finance management tool that categorizes expenses, predicts budget trends, and suggests saving strategies.",
+    "employeeName": "George Hamilton",
+    "priority": "Medium",
+    "upVotes": 25,
+    "downVotes": 6
+  },
+  {
+    "id": "1a3f8589-6acf-445a-a513-acd5cd774ab7",
+    "summary": "Smart Home Energy Saver",
+    "description": "A system that learns user behavior and optimizes home energy consumption for cost savings.",
+    "employeeName": "Alice Johnson",
+    "priority": "Low",
+    "upVotes": 13,
+    "downVotes": 0
+  },
+  {
+    "id": "3219267e-7e3f-4081-aba7-2ecad482d502",
+    "summary": "Automated Social Media Content Generator",
+    "description": "A tool that generates engaging social media posts based on trending topics and user preferences.",
+    "employeeName": "Charlie Davis",
+    "priority": "High",
+    "upVotes": 24,
+    "downVotes": 7
+  },
+  {
+    "id": "ae5195b9-772f-44a6-832e-4ffe00800279",
+    "summary": "AI-Based Meeting Minutes Recorder",
+    "description": "An AI tool that records meetings, transcribes discussions, and summarizes key points automatically.",
+    "employeeName": "Danielle Brooks",
+    "priority": "Low",
+    "upVotes": 9,
+    "downVotes": 0
+  },
+  {
+    "id": "a37e56d1-bb87-4fcd-995f-9c1f7fab1b59",
+    "summary": "Blockchain-Based Voting System",
+    "description": "A secure, tamper-proof digital voting system powered by blockchain technology.",
+    "employeeName": "Danielle Brooks",
+    "priority": "High",
+    "upVotes": 29,
+    "downVotes": 4
+  },
+  {
+    "id": "59b0ab08-315d-4ab5-9916-71455ad0c63e",
+    "summary": "Augmented Reality Shopping Assistant",
+    "description": "An AR tool that allows users to visualize products in their space before purchasing.",
+    "employeeName": "Fiona Mitchell",
+    "priority": "Low",
+    "upVotes": 16,
+    "downVotes": 3
+  },
+  {
+    "id": "cce935a9-2392-48b4-9b0b-d79f4077cebd",
+    "summary": "AI-Driven Market Trend Analyzer",
+    "description": "A tool that scans industry data and predicts upcoming market trends based on AI insights.",
+    "employeeName": "Ethan Parker",
+    "priority": "High",
+    "upVotes": 27,
+    "downVotes": 4
+  },
+  {
+    "id": "a83b814c-c983-4509-bf3f-dae4a8ae121f",
+    "summary": "Smart Parking Finder",
+    "description": "A system that detects available parking spots in real time and navigates drivers to the nearest option.",
+    "employeeName": "Danielle Brooks",
+    "priority": "High",
+    "upVotes": 22,
+    "downVotes": 5
+  },
+  {
+    "id": "4e0e66dd-d2fa-4e95-be11-d6233cb4a788",
+    "summary": "Automated Daily Task Planner",
+    "description": "An AI-based planner that prioritizes daily tasks based on urgency and user preferences.",
+    "employeeName": "Ethan Parker",
+    "priority": "Medium",
+    "upVotes": 14,
+    "downVotes": 8
+  },
+  {
+    "id": "b34193ef-173c-4bc2-895d-f237302cb75b",
+    "summary": "AI-Powered Fraud Detection System",
+    "description": "A security system that detects fraudulent transactions in real time using machine learning.",
+    "employeeName": "Fiona Mitchell",
+    "priority": "High",
+    "upVotes": 21,
+    "downVotes": 6
+  },
+  {
+    "id": "f899efdd-9544-4372-bf5d-38145ae19620",
+    "summary": "Smart Water Management System",
+    "description": "A system that monitors and optimizes water usage in homes and businesses.",
+    "employeeName": "George Hamilton",
+    "priority": "High",
+    "upVotes": 17,
+    "downVotes": 0
+  },
+  {
+    "id": "8953c665-411e-4ad2-b403-0ab4e7b0700f",
+    "summary": "AI-Based Legal Document Analyzer",
+    "description": "A tool that scans legal documents, highlights key points, and identifies risks automatically.",
+    "employeeName": "Danielle Brooks",
+    "priority": "High",
+    "upVotes": 28,
+    "downVotes": 0
+  },
+  {
+    "id": "ecb04860-c24a-469a-a80d-ce6bec2db981",
+    "summary": "AI-Based Personalized Workout Coach",
+    "description": "An app that generates customized workout routines based on fitness goals and performance data.",
+    "employeeName": "Bob Smith",
+    "priority": "High",
+    "upVotes": 22,
+    "downVotes": 8
+  },
+  {
+    "id": "76f891bf-3e62-4032-b699-576e290ff161",
+    "summary": "Smart Virtual Event Management Platform",
+    "description": "A platform that organizes, schedules, and automates virtual events seamlessly.",
+    "employeeName": "Jasmine Patel",
+    "priority": "Medium",
+    "upVotes": 13,
+    "downVotes": 2
+  },
+  {
+    "id": "8624022d-1680-45f0-b1e0-9ce9c27ef012",
+    "summary": "AI-Powered Code Debugger",
+    "description": "A system that detects and suggests fixes for coding errors in real time.",
+    "employeeName": "Bob Smith",
+    "priority": "Low",
+    "upVotes": 11,
+    "downVotes": 3
   }
 ]

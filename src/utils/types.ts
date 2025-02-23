@@ -45,4 +45,21 @@ export type Idea = {
   export type VoteButtonsProps = {
     idea: Idea
   }
+  export type SelectInputProps = {
+    label: string;
+    name: string;
+    options: string[];
+    register: any;
+    errors: any;
+    isLoading?: boolean;
+  }
+  export type TextInputProps = {
+    label: string;
+    name: string;
+    register: any;
+    errors: any;
+    placeholder?: string;
+    type?: "text" | "textarea";
+  }
+  
   

@@ -59,64 +59,73 @@ export default function IdeaList() {
   };
 
   return (
-    <main className="p-6 max-w-4xl mx-auto flex flex-col min-h-screen">
-      <h1 className="text-3xl font-bold text-center">Feature Ideas</h1>
+    <main className="p-6 min-h-screen bg-gray-100 flex justify-center">
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-2xl p-6 border border-gray-300 flex flex-col min-h-[500px]">
+        <h1 className="text-3xl font-bold text-center mb-6">Feature Ideas</h1>
 
-      <div className="flex justify-end mb-4">
-        <Link
-          href="/create-idea"
-          className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-lg hover:bg-blue-600"
-        >
-          ➕ Create Idea
-        </Link>
-      </div>
+        {/* Create Idea Button */}
+        <div className="flex justify-end mb-4">
+          <Link
+            href="/create-idea"
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+          >
+            ➕ Create Idea
+          </Link>
+        </div>
 
-      <div className="relative mb-6">
-        <input
-          type="text"
-          placeholder="Search ideas..."
-          value={searchQuery}
-          onChange={handleSearch}
-          className="w-full p-3 pl-10 border rounded-lg shadow-md focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-
-      {isPending ? (
-        <p className="text-center">Loading...</p>
-      ) : ideas.length > 0 ? (
-        <ul className="space-y-4 flex-grow">
-          {ideas.map((idea) => (
-            <IdeaItem
-              key={idea.id}
-              idea={idea}
-              setSelectedIdeaId={setSelectedIdeaId}
-            />
-          ))}
-        </ul>
-      ) : (
-        <p className="text-center text-lg">No ideas found</p>
-      )}
-
-      {ideas.length > 0 && (
-        <div className="mt-auto pt-6 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            totalIdeas={ideas.length}
+        {/* Search Input */}
+        <div className="relative mb-6">
+          <input
+            type="text"
+            placeholder="Search ideas..."
+            value={searchQuery}
+            onChange={handleSearch}
+            className="w-full p-3 pl-10 border rounded-lg shadow-md focus:ring-2 focus:ring-blue-500"
           />
         </div>
-      )}
 
-      <ConfirmDialog
-        isOpen={!!selectedIdeaId}
-        onConfirm={() => {
-          if (selectedIdeaId) {
-            deleteMutation.mutate(selectedIdeaId);
-            setSelectedIdeaId(null);
-          }
-        }}
-        onCancel={() => setSelectedIdeaId(null)}
-      />
+        {/* Ideas List */}
+        <div className="flex-grow">
+          {isPending ? (
+            <p className="text-center text-gray-600">Loading...</p>
+          ) : ideas.length > 0 ? (
+            <ul className="space-y-4">
+              {ideas.map((idea) => (
+                <IdeaItem
+                  key={idea.id}
+                  idea={idea}
+                  setSelectedIdeaId={setSelectedIdeaId}
+                />
+              ))}
+            </ul>
+          ) : (
+            <p className="text-center text-lg text-gray-500">No ideas found</p>
+          )}
+        </div>
+
+        {/* Pagination - Always at the Bottom */}
+        {ideas.length > 0 && (
+          <div className="mt-6 pt-6 border-t border-gray-200 flex justify-center">
+            <Pagination
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              totalIdeas={ideas.length}
+            />
+          </div>
+        )}
+
+        {/* Delete Confirmation Dialog */}
+        <ConfirmDialog
+          isOpen={!!selectedIdeaId}
+          onConfirm={() => {
+            if (selectedIdeaId) {
+              deleteMutation.mutate(selectedIdeaId);
+              setSelectedIdeaId(null);
+            }
+          }}
+          onCancel={() => setSelectedIdeaId(null)}
+        />
+      </div>
     </main>
   );
 }
