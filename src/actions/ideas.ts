@@ -14,16 +14,17 @@ export async function fetchIdeas(page: number = 1, limit: number = 20, searchQue
       idea.summary.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
-// todo : return total items 
+  const totalItems = ideas.length
   const paginatedIdeas = ideas.sort((a, b) => b.upVotes - a.upVotes).slice((page - 1) * limit, page * limit);
 
-  return paginatedIdeas;
+  return {paginatedIdeas, totalItems};
 }
 
-export async function fetchIdeaById(id: string){
-  const ideas: Idea[] = await fetchIdeas();
-  const pp = ideas.find((idea) => idea.id === id);
-  return pp
+export async function fetchIdeaById(id: string) {
+  const data = await fetchIdeas(1, Number.MAX_SAFE_INTEGER, "");
+  const ideas = data?.paginatedIdeas 
+  const idea = ideas.find((idea) => idea.id === id);
+  return idea
 }
 
 export async function createIdea(formData: FormData) {

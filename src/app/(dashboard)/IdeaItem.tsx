@@ -4,7 +4,7 @@ import VoteButtons from "./VoteButtons";
 
 export default function IdeaItem({ idea, setSelectedIdeaId }: IdeaItemProps) {
   return (
-    <li className="p-5 rounded-xl shadow-lg bg-gray-50 transform transition hover:scale-[1.02]">
+    <li className="p-5 rounded-xl shadow-lg bg-gray-50 transition hover:scale-[1.02]">
       <Link href={`/idea/${idea.id}`} className="block">
         <h2 className="text-xl font-semibold">{idea.summary}</h2>
         <h3 className="text-sm text-gray-500">

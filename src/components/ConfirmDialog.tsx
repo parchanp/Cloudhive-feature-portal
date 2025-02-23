@@ -11,18 +11,18 @@ export default function ConfirmDialog({
     <Dialog.Root open={isOpen} onOpenChange={onCancel}>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50" />
-        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full">
-          <Dialog.Title className="text-lg font-bold text-gray-900 dark:text-white">
+        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+          <Dialog.Title className="text-lg font-bold text-gray-900">
             Confirm Delete
           </Dialog.Title>
-          <Dialog.Description className="text-gray-600 dark:text-gray-300 mt-2">
+          <Dialog.Description className="text-gray-600 mt-2">
             Are you sure you want to delete this idea? This action cannot be
             undone.
           </Dialog.Description>
           <div className="mt-4 flex justify-end gap-3">
             <button
               onClick={onCancel}
-              className="px-4 py-2 bg-gray-300 dark:bg-gray-700 rounded-lg"
+              className="px-4 py-2 bg-gray-300 rounded-lg"
             >
               Cancel
             </button>

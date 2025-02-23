@@ -23,7 +23,7 @@ const Pagination = ({
         Previous
       </button>
 
-      <span className="px-4 py-2 border rounded bg-gray-100 dark:bg-gray-700">
+      <span className="px-4 py-2 border rounded bg-gray-100">
         Page {currentPage} of {totalPages}
       </span>
 

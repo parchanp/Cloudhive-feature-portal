@@ -15,11 +15,13 @@ export default function IdeaList() {
   const queryClient = useQueryClient();
   const [selectedIdeaId, setSelectedIdeaId] = useState<string | null>(null);
 
-  const { data: ideas = [], isPending } = useQuery({
+  const { data, isPending } = useQuery({
     queryKey: ["ideas", currentPage, searchQuery],
     queryFn: () => fetchIdeas(currentPage, ITEMS_PER_PAGE, searchQuery),
     placeholderData: (previousData) => previousData,
   });
+  const ideas = data?.paginatedIdeas || [];
+  const totalItems = data?.totalItems || 0;
 
   const deleteMutation = useMutation({
     mutationFn: deleteIdea,
@@ -61,7 +63,9 @@ export default function IdeaList() {
   return (
     <main className="p-6 min-h-screen bg-gray-100 flex justify-center">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-2xl p-6 border border-gray-300 flex flex-col min-h-[500px]">
-        <h1 className="text-3xl font-bold text-center mb-6">Feature Ideas</h1>
+        <h1 className="text-3xl font-bold text-center mb-6">
+          List Of Feature Ideas
+        </h1>
 
         {/* Create Idea Button */}
         <div className="flex justify-end mb-4">
@@ -109,7 +113,7 @@ export default function IdeaList() {
             <Pagination
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
-              totalIdeas={ideas.length}
+              totalIdeas={totalItems}
             />
           </div>
         )}
