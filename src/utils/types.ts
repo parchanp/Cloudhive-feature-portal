@@ -22,7 +22,8 @@ export type Idea = {
   
   export type PaginationProps = {
     currentPage: number;
-    setCurrentPage: Dispatch<SetStateAction<number>>
+    setCurrentPage: Dispatch<SetStateAction<number>>;
+    totalIdeas: number;
   }
 
   export type IdeaFormValues = {

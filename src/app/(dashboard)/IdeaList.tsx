@@ -213,7 +213,11 @@ export default function IdeaList() {
       )}
 
       <div className="mt-auto pt-6 flex justify-center">
-        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Pagination
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          totalIdeas={ideas.length}
+        />
       </div>
     </main>
   );
