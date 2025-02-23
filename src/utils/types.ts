@@ -32,3 +32,17 @@ export type Idea = {
     employee: string;
     priority: string;
   };
+  export type ConfirmDialogProps = {
+    isOpen: boolean;
+    onConfirm: () => void;
+    onCancel: () => void;
+  };
+
+  export type IdeaItemProps = {
+    idea: Idea;
+    setSelectedIdeaId: (id: string | null) => void;
+  }
+  export type VoteButtonsProps = {
+    idea: Idea
+  }
+  

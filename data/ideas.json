@@ -1,11 +1,11 @@
 [
   {
-    "id": "acb7e35b-46ae-41a1-a9cc-73e9c4d04614",
-    "summary": "dffafaf",
-    "description": "aacadcadc",
-    "employeeName": "Danielle Brooks",
-    "priority": "Low",
-    "upVotes": 3,
-    "downVotes": 2
+    "id": "56904fac-6115-49fa-aebb-71cc4a290b26",
+    "summary": "Smart Meeting Scheduler",
+    "description": "Managing meeting schedules across multiple teams and time zones is a challenge. The Smart Meeting Scheduler would integrate with employees' calendars (Google Calendar, Outlook, etc.), suggest optimal meeting times based on availability, and use AI to recommend slots with the least conflicts.\r\n\r\nKey Features:\r\n✅ AI-powered suggestions to pick the best time for all attendees\r\n✅ Automatic time zone adjustments for remote teams\r\n✅ Smart reminders & rescheduling to avoid last-minute conflicts\r\n✅ Integration with Slack, Teams, and email for seamless notifications\r\n\r\nThis feature would help reduce meeting overlaps, improve productivity, and eliminate back-and-forth scheduling emails. ",
+    "employeeName": "Alice Johnson",
+    "priority": "Medium",
+    "upVotes": 4,
+    "downVotes": 1
   }
 ]
