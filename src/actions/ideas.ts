@@ -45,7 +45,7 @@ export async function createIdea(formData: FormData) {
       console.warn("No existing data, creating a new file.");
     }
 
-    const newIdea = { id:uuidv4() , summary, description, employee , priority , upVotes : 0 , downVotes: 0 };
+    const newIdea = { id:uuidv4() , summary, description, employeeName: employee , priority , upVotes : 0 , downVotes: 0 };
 
     ideas.push(newIdea);
     await fs.writeFile(FILE_PATH, JSON.stringify(ideas, null, 2));
