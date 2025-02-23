@@ -98,4 +98,17 @@ export async function downvoteIdea(id: string) {
   }
 }
 
+export async function deleteIdea(id : string){
+  try{
+    const data = await fs.readFile(FILE_PATH , 'utf-8')
+    let ideas = JSON.parse(data)
+    const updatedIdeas = ideas.filter((idea: Idea) => idea.id !== id)
+    await fs.writeFile(FILE_PATH , JSON.stringify(updatedIdeas, null , 2) , 'utf-8')
+    return { success: true, message: "Idea deleted successfully" };
+  }catch(error){
+    console.error("error in deleting the idea", error)
+    throw new Error('Failed to delete the idea')
+  }
+}
+
 

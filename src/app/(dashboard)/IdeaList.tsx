@@ -2,7 +2,12 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Idea } from "../../utils/types";
-import { downvoteIdea, fetchIdeas, upvoteIdea } from "../../actions/ideas";
+import {
+  deleteIdea,
+  downvoteIdea,
+  fetchIdeas,
+  upvoteIdea,
+} from "../../actions/ideas";
 import { ITEMS_PER_PAGE } from "../../utils/constants";
 import Pagination from "../../components/Pagination";
 import Link from "next/link";
@@ -66,7 +71,7 @@ export default function IdeaList() {
       ]);
       queryClient.setQueryData(
         ["ideas", currentPage, searchQuery],
-        (old: Idea[] | undefined) =>
+        (old: Idea[]) =>
           old?.map((idea) =>
             idea.id === id ? { ...idea, downVotes: idea.downVotes + 1 } : idea
           )
@@ -75,6 +80,38 @@ export default function IdeaList() {
     },
     mutationFn: (id: string) => downvoteIdea(id),
 
+    onError: (_error, _id, context) => {
+      if (context?.previousIdeas) {
+        queryClient.setQueryData(
+          ["ideas", currentPage, searchQuery],
+          context.previousIdeas
+        );
+      }
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["ideas", currentPage, searchQuery],
+      });
+    },
+  });
+
+  const deleteMutation = useMutation({
+    onMutate: async (id: string) => {
+      await queryClient.cancelQueries({
+        queryKey: ["ideas", currentPage, searchQuery],
+      });
+      const previousIdeas = queryClient.getQueryData([
+        "ideas",
+        currentPage,
+        searchQuery,
+      ]);
+      queryClient.setQueryData(
+        ["ideas", currentPage, searchQuery],
+        (oldIdeas: Idea[]) => oldIdeas.filter((item) => item.id !== id)
+      );
+      return { previousIdeas };
+    },
+    mutationFn: (id) => deleteIdea(id),
     onError: (_error, _id, context) => {
       if (context?.previousIdeas) {
         queryClient.setQueryData(
@@ -110,6 +147,14 @@ export default function IdeaList() {
     event.preventDefault();
     event.stopPropagation();
     downvoteMutation.mutate(id);
+  };
+  const handleDeleteIdea = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    id: string
+  ) => {
+    event.preventDefault();
+    event.stopPropagation();
+    deleteMutation.mutate(id);
   };
 
   return (
@@ -159,7 +204,7 @@ export default function IdeaList() {
         <p className="text-center text-gray-500 dark:text-gray-300">
           Loading...
         </p>
-      ) : (
+      ) : ideas && ideas.length > 0 ? (
         <ul className="space-y-4 flex-grow">
           {ideas.map((idea) => (
             <li
@@ -204,21 +249,35 @@ export default function IdeaList() {
                     >
                       Downvote 🚀
                     </button>
+                    <button
+                      onClick={(event) => handleDeleteIdea(event, idea.id)}
+                      className="px-5 py-2 rounded-lg text-white bg-blue-500 hover:bg-blue-600 transition duration-300 disabled:opacity-50"
+                      disabled={
+                        downvoteMutation.isPending &&
+                        downvoteMutation.variables === idea.id
+                      }
+                    >
+                      Delete Idea
+                    </button>
                   </div>
                 </div>
               </Link>
             </li>
           ))}
         </ul>
+      ) : (
+        <div className="w-full text-lg text-center">No ideas found</div>
       )}
 
-      <div className="mt-auto pt-6 flex justify-center">
-        <Pagination
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          totalIdeas={ideas.length}
-        />
-      </div>
+      {ideas && ideas.length > 0 && (
+        <div className="mt-auto pt-6 flex justify-center">
+          <Pagination
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            totalIdeas={ideas.length}
+          />
+        </div>
+      )}
     </main>
   );
 }

@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchEmployees } from "@/actions/employees";
 import { priorities } from "@/utils/constants";
 import { createIdea } from "@/actions/ideas";
+import { useRouter } from "next/navigation";
 
 export default function CreateIdea() {
   const {
@@ -18,6 +19,7 @@ export default function CreateIdea() {
   });
 
   const [submitting, setSubmitting] = useState(false);
+  const router = useRouter();
 
   const { data: employees = [], isPending } = useQuery({
     queryKey: ["employees"],
@@ -38,6 +40,7 @@ export default function CreateIdea() {
 
     if (response.success) {
       alert("Idea submitted successfully!");
+      router.push("/");
     } else {
       alert("Failed to submit idea: " + response.message);
     }
