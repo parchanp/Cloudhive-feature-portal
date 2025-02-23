@@ -26,32 +26,23 @@ export default function IdeaList() {
   const deleteMutation = useMutation({
     mutationFn: deleteIdea,
     onMutate: async (id: string) => {
-      await queryClient.cancelQueries({
-        queryKey: ["ideas", currentPage, searchQuery],
-      });
-      const previousIdeas = queryClient.getQueryData([
-        "ideas",
-        currentPage,
-        searchQuery,
-      ]);
-      queryClient.setQueryData(
-        ["ideas", currentPage, searchQuery],
-        (oldIdeas: Idea[]) => oldIdeas.filter((idea) => idea.id !== id)
+      await queryClient.cancelQueries({ queryKey: ["ideas"] });
+
+      const previousIdeas = queryClient.getQueryData<Idea[]>(["ideas"]);
+
+      queryClient.setQueryData(["ideas"], (oldIdeas: Idea[] | undefined) =>
+        oldIdeas ? oldIdeas.filter((idea) => idea.id !== id) : []
       );
+
       return { previousIdeas };
     },
     onError: (_error, _id, context) => {
       if (context?.previousIdeas) {
-        queryClient.setQueryData(
-          ["ideas", currentPage, searchQuery],
-          context.previousIdeas
-        );
+        queryClient.setQueryData(["ideas"], context.previousIdeas);
       }
     },
     onSettled: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["ideas", currentPage, searchQuery],
-      });
+      queryClient.invalidateQueries({ queryKey: ["ideas"] });
     },
   });
 

@@ -7,6 +7,7 @@ import { priorities } from "@/utils/constants";
 import { useCreateIdeaForm } from "@/hooks/useCreateIdeaForm";
 import TextInput from "@/components/TextInput";
 import SelectInput from "@/components/SelectInput";
+import { useRouter } from "next/navigation";
 
 export default function CreateIdea() {
   const { register, handleSubmit, errors, submitIdea } = useCreateIdeaForm();
@@ -17,10 +18,19 @@ export default function CreateIdea() {
     queryFn: fetchEmployees,
     placeholderData: (previousData) => previousData,
   });
+  const router = useRouter();
 
   return (
     <main className="p-6 min-h-screen bg-gray-100 flex justify-center">
-      <div className="w-full max-w-3xl bg-white shadow-lg rounded-2xl p-8 border border-gray-300">
+      <div className="w-full max-w-3xl bg-white shadow-lg rounded-2xl p-8 border border-gray-300 relative">
+        <button
+          type="button"
+          onClick={() => router.back()}
+          className="absolute top-4 left-4 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition duration-300"
+        >
+          ← Back
+        </button>
+
         <h1 className="text-3xl font-bold text-center mb-6">
           Submit a New Idea
         </h1>
